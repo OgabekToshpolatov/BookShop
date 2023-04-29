@@ -1,0 +1,12 @@
+E:\BookShop\Bulky\Bulky.Models\bin\Debug\net6.0\Bulky.Models.deps.json
+E:\BookShop\Bulky\Bulky.Models\bin\Debug\net6.0\Bulky.Models.dll
+E:\BookShop\Bulky\Bulky.Models\bin\Debug\net6.0\Bulky.Models.pdb
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\Bulky.Models.csproj.AssemblyReference.cache
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\Bulky.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\Bulky.Models.AssemblyInfoInputs.cache
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\Bulky.Models.AssemblyInfo.cs
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\Bulky.Models.csproj.CoreCompileInputs.cache
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\Bulky.Models.dll
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\refint\Bulky.Models.dll
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\Bulky.Models.pdb
+E:\BookShop\Bulky\Bulky.Models\obj\Debug\net6.0\ref\Bulky.Models.dll

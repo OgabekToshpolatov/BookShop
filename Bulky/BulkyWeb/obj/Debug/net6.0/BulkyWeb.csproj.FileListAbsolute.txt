@@ -383,3 +383,9 @@ E:\BookShop\Bulky\BulkyWeb\obj\Debug\net6.0\refint\BulkyWeb.dll
 E:\BookShop\Bulky\BulkyWeb\obj\Debug\net6.0\BulkyWeb.pdb
 E:\BookShop\Bulky\BulkyWeb\obj\Debug\net6.0\BulkyWeb.genruntimeconfig.cache
 E:\BookShop\Bulky\BulkyWeb\obj\Debug\net6.0\ref\BulkyWeb.dll
+E:\BookShop\Bulky\BulkyWeb\bin\Debug\net6.0\Bulky.DataAccess.dll
+E:\BookShop\Bulky\BulkyWeb\bin\Debug\net6.0\Bulky.Models.dll
+E:\BookShop\Bulky\BulkyWeb\bin\Debug\net6.0\Bulky.Utility.dll
+E:\BookShop\Bulky\BulkyWeb\bin\Debug\net6.0\Bulky.DataAccess.pdb
+E:\BookShop\Bulky\BulkyWeb\bin\Debug\net6.0\Bulky.Models.pdb
+E:\BookShop\Bulky\BulkyWeb\bin\Debug\net6.0\Bulky.Utility.pdb
