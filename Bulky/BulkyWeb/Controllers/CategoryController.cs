@@ -1,4 +1,5 @@
 using BulkyBook.DataAccess.Data;
+using BulkyBook.DataAccess.Repository;
 using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -7,16 +8,16 @@ namespace BulkyBookWeb.Controllers;
 
 public class CategoryController:Controller
 {
-    private readonly ICategoryRepository _categoryRepo;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public CategoryController(ICategoryRepository categoryRepo)
+    public CategoryController(IUnitOfWork unitOfWork)
     {
-        _categoryRepo = categoryRepo;
+        _unitOfWork = unitOfWork;
     }
 
     public IActionResult Index()
     {
-        IEnumerable<Category> categoryList = _categoryRepo.GetAll().ToList();
+        IEnumerable<Category> categoryList = _unitOfWork.Category.GetAll().ToList();
         return View(categoryList);
     }
 
@@ -34,8 +35,8 @@ public class CategoryController:Controller
         } 
          if(ModelState.IsValid)
          {
-            _categoryRepo.Add(obj);
-            _categoryRepo.Save();
+            _unitOfWork.Category.Add(obj);
+            _unitOfWork.Save();
              TempData["success"] = "Category created successfully";
             return RedirectToAction("Index");
          }
@@ -47,7 +48,7 @@ public class CategoryController:Controller
         {
             return NotFound();
         }
-        var categoryId = _categoryRepo.Get(u => u.Id == id);
+        var categoryId = _unitOfWork.Category.Get(u => u.Id == id);
         if(categoryId is null ) return NotFound();
         return View(categoryId);
     }
@@ -61,8 +62,8 @@ public class CategoryController:Controller
         } 
          if(ModelState.IsValid)
          {
-            _categoryRepo.Update(obj);
-            _categoryRepo.Save();
+            _unitOfWork.Category.Update(obj);
+            _unitOfWork.Save();
             TempData["success"] = "Category updated successfully";
             return RedirectToAction("Index");
          }
@@ -75,7 +76,7 @@ public class CategoryController:Controller
         {
             return NotFound();
         }
-        var categoryId = _categoryRepo.Get(u => u.Id == id);
+        var categoryId = _unitOfWork.Category.Get(u => u.Id == id);
         if (categoryId is null ) return NotFound();
         return View(categoryId);
     }
@@ -84,12 +85,11 @@ public class CategoryController:Controller
     [ValidateAntiForgeryToken]
     public IActionResult DeletePost(int? id)
     {
-        var obj = _categoryRepo.Get(u => u.Id == id);
-
+        var obj = _unitOfWork.Category.Get(u => u.Id == id);
         if(obj == null) return NotFound();
 
-        _categoryRepo.Remove(obj);
-        _categoryRepo.Save();
+        _unitOfWork.Category.Remove(obj);
+        _unitOfWork.Save();
         TempData["success"] = "Category deleted successfully";
         return RedirectToAction("Index");
     }
