@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\BookShop\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
-                "projectPath": "E:\\BookShop\\Bulky\\Bulky.Models\\Bulky.Models.csproj"
+              "E:\\BookShop\\Bulky\\Bulky.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "E:\\BookShop\\Bulky\\Bulky.Models\\BulkyBook.Models.csproj"
               },
-              "E:\\BookShop\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj": {
-                "projectPath": "E:\\BookShop\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj"
+              "E:\\BookShop\\Bulky\\Bulky.Utility\\BulkyBook.Utility.csproj": {
+                "projectPath": "E:\\BookShop\\Bulky\\Bulky.Utility\\BulkyBook.Utility.csproj"
               }
             }
           }
@@ -82,12 +82,12 @@
         }
       }
     },
-    "E:\\BookShop\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
+    "E:\\BookShop\\Bulky\\Bulky.Models\\BulkyBook.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookShop\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
-        "projectName": "Bulky.Models",
-        "projectPath": "E:\\BookShop\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
+        "projectUniqueName": "E:\\BookShop\\Bulky\\Bulky.Models\\BulkyBook.Models.csproj",
+        "projectName": "BulkyBook.Models",
+        "projectPath": "E:\\BookShop\\Bulky\\Bulky.Models\\BulkyBook.Models.csproj",
         "packagesPath": "C:\\Users\\Assalomu Alaykum\\.nuget\\packages\\",
         "outputPath": "E:\\BookShop\\Bulky\\Bulky.Models\\obj\\",
         "projectStyle": "PackageReference",
@@ -137,12 +137,12 @@
         }
       }
     },
-    "E:\\BookShop\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj": {
+    "E:\\BookShop\\Bulky\\Bulky.Utility\\BulkyBook.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookShop\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
-        "projectName": "Bulky.Utility",
-        "projectPath": "E:\\BookShop\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
+        "projectUniqueName": "E:\\BookShop\\Bulky\\Bulky.Utility\\BulkyBook.Utility.csproj",
+        "projectName": "BulkyBook.Utility",
+        "projectPath": "E:\\BookShop\\Bulky\\Bulky.Utility\\BulkyBook.Utility.csproj",
         "packagesPath": "C:\\Users\\Assalomu Alaykum\\.nuget\\packages\\",
         "outputPath": "E:\\BookShop\\Bulky\\Bulky.Utility\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mXi5Mv/sqRDwjatS/BQCQEYOtwfMDsnN5FTgukOsECcBrDRtJv64h1WV3V1GMozQehz4IaOv2s98j4PPUDOzrA==",
+  "dgSpecHash": "q/M2mexHcawyFqmmdaHk/0XKri+10HMGSIWiiiKoy/kxcQrCFh/LNM+gAAy1zAFfD03UPfJsZN3PLhAO1vtFqQ==",
   "success": true,
-  "projectFilePath": "E:\\BookShop\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
+  "projectFilePath": "E:\\BookShop\\Bulky\\Bulky.Utility\\BulkyBook.Utility.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

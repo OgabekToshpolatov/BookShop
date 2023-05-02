@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8zaZqcxWPpQ24aSXKJmkRB2RMTiX6832YgrBNac5w4C6+mmuDczVyyjHtWVyixJ3ORocTPzpbNpMQxk5eXeLsQ==",
+  "dgSpecHash": "tt4rASq/jbrjvA7r2UTT0tqZAHoL0O7cvPU9OBHvidqCqTTA3d9J0HEshvX0dmivxoIiy8iXa+YYN7GRDQCpAA==",
   "success": true,
-  "projectFilePath": "E:\\BookShop\\Bulky\\Bulky.DataAccess\\Bulky.DataAccess.csproj",
+  "projectFilePath": "E:\\BookShop\\Bulky\\Bulky.DataAccess\\BulkyBook.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Assalomu Alaykum\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Assalomu Alaykum\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",

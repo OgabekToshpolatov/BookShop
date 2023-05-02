@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kmpxv/E2IhuRVVHK9BMmSMslkMEn+bZ3pBK7ZcRyB/Ssqk1n+qL9zM1zxDvfF5dVhkef6dLmDRRE1Wfl2sY5YQ==",
+  "dgSpecHash": "qDtSRB/yCiIYXVB5NanIw4cywjPe3jgnX/yGP38BX0QdmLA/zOw6M3VKwbtUuhiSLKYmSt437coJFgkvkfBs5w==",
   "success": true,
-  "projectFilePath": "E:\\BookShop\\Bulky\\BulkyWeb\\BulkyWeb.csproj",
+  "projectFilePath": "E:\\BookShop\\Bulky\\BulkyWeb\\BulkyBookWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Assalomu Alaykum\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Assalomu Alaykum\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
