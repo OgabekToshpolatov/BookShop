@@ -11,7 +11,8 @@ builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 builder.Services.AddDbContext<AppDbContext>(options => 
 {
-    options.UseSqlite(builder.Configuration.GetConnectionString("Default"));
+    options.UseSqlite(builder.Configuration.GetConnectionString("Default"),
+        b => b.MigrationsAssembly("BulkyBookWeb"));
 });
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

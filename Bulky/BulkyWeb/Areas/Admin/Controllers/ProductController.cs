@@ -7,18 +7,18 @@ using Microsoft.AspNetCore.Mvc;
 namespace BulkyBookWeb.Areas.Admin.Controllers;
 
 [Area("Admin")]
-public class CategoryController : Controller
+public class ProductController : Controller
 {
     private readonly IUnitOfWork _unitOfWork;
 
-    public CategoryController(IUnitOfWork unitOfWork)
+    public ProductController(IUnitOfWork unitOfWork)
     {
         _unitOfWork = unitOfWork;
     }
 
     public IActionResult Index()
     {
-        IEnumerable<Category> productList = _unitOfWork.Category.GetAll().ToList();
+        IEnumerable<Product> productList = _unitOfWork.Product.GetAll().ToList();
         return View(productList);
     }
 
@@ -28,17 +28,13 @@ public class CategoryController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Category obj)
+    public IActionResult Create(Product obj)
     {
-        if (obj.Name == obj.DisplayOrder.ToString())
-        {
-            ModelState.AddModelError("Name", "The DisplayOrder cannot exactly match the Name");
-        }
         if (ModelState.IsValid)
         {
-            _unitOfWork.Category.Add(obj);
+            _unitOfWork.Product.Add(obj);
             _unitOfWork.Save();
-            TempData["success"] = "Category created successfully";
+            TempData["success"] = "Product created successfully";
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -49,23 +45,20 @@ public class CategoryController : Controller
         {
             return NotFound();
         }
-        var productId = _unitOfWork.Category.Get(u => u.Id == id);
+        var productId = _unitOfWork.Product.Get(u => u.Id == id);
         if (productId is null) return NotFound();
         return View(productId);
     }
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Edit(Category obj)
+    public IActionResult Edit(Product obj)
     {
-        if (obj.Name == obj.DisplayOrder.ToString())
-        {
-            ModelState.AddModelError("Name", "The DisplayOrder cannot exactly match the Name");
-        }
+
         if (ModelState.IsValid)
         {
-            _unitOfWork.Category.Update(obj);
+            _unitOfWork.Product.Update(obj);
             _unitOfWork.Save();
-            TempData["success"] = "Category updated successfully";
+            TempData["success"] = "Product updated successfully";
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -77,7 +70,7 @@ public class CategoryController : Controller
         {
             return NotFound();
         }
-        var productId = _unitOfWork.Category.Get(u => u.Id == id);
+        var productId = _unitOfWork.Product.Get(u => u.Id == id);
         if (productId is null) return NotFound();
         return View(productId);
     }
@@ -86,12 +79,12 @@ public class CategoryController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult DeletePost(int? id)
     {
-        var obj = _unitOfWork.Category.Get(u => u.Id == id);
+        var obj = _unitOfWork.Product.Get(u => u.Id == id);
         if (obj == null) return NotFound();
 
-        _unitOfWork.Category.Remove(obj);
+        _unitOfWork.Product.Remove(obj);
         _unitOfWork.Save();
-        TempData["success"] = "Category deleted successfully";
+        TempData["success"] = "Product deleted successfully";
         return RedirectToAction("Index");
     }
 
