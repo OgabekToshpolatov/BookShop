@@ -3,6 +3,7 @@ using System;
 using BulkyBook.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BulkyBookWeb.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230503064450_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
@@ -42,21 +44,21 @@ namespace BulkyBookWeb.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDateTime = new DateTime(2023, 5, 3, 11, 53, 48, 844, DateTimeKind.Local).AddTicks(5699),
+                            CreatedDateTime = new DateTime(2023, 5, 3, 11, 44, 49, 956, DateTimeKind.Local).AddTicks(8878),
                             DisplayOrder = 1,
                             Name = "Action"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDateTime = new DateTime(2023, 5, 3, 11, 53, 48, 844, DateTimeKind.Local).AddTicks(5712),
+                            CreatedDateTime = new DateTime(2023, 5, 3, 11, 44, 49, 956, DateTimeKind.Local).AddTicks(8892),
                             DisplayOrder = 2,
                             Name = "SciFi"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDateTime = new DateTime(2023, 5, 3, 11, 53, 48, 844, DateTimeKind.Local).AddTicks(5713),
+                            CreatedDateTime = new DateTime(2023, 5, 3, 11, 44, 49, 956, DateTimeKind.Local).AddTicks(8894),
                             DisplayOrder = 3,
                             Name = "History"
                         });
@@ -80,9 +82,6 @@ namespace BulkyBookWeb.Migrations
 
                     b.Property<string>("ISBN")
                         .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ImageUrl")
                         .HasColumnType("TEXT");
 
                     b.Property<double>("ListPrice")
@@ -115,7 +114,6 @@ namespace BulkyBookWeb.Migrations
                             CategoryId = 1,
                             Description = "Praesnt vitae doesnt sodales decabryu. Prasent meolstio orco augue, vitae diecription bnd to array",
                             ISBN = "SWD9999001",
-                            ImageUrl = "",
                             ListPrice = 99.0,
                             Price = 90.0,
                             Price100 = 80.0,
@@ -129,7 +127,6 @@ namespace BulkyBookWeb.Migrations
                             CategoryId = 1,
                             Description = "Praesnt vitae doesnt sodales decabryu. Prasent meolstio orco augue, vitae diecription bnd to array",
                             ISBN = "SWD8899001",
-                            ImageUrl = "",
                             ListPrice = 98.0,
                             Price = 91.0,
                             Price100 = 80.0,
@@ -143,7 +140,6 @@ namespace BulkyBookWeb.Migrations
                             CategoryId = 2,
                             Description = "Praesnt vitae doesnt sodales decabryu. Prasent meolstio orco augue, vitae diecription bnd to array",
                             ISBN = "SWD9988001",
-                            ImageUrl = "",
                             ListPrice = 93.0,
                             Price = 91.0,
                             Price100 = 83.0,
