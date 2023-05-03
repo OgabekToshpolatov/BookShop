@@ -47,7 +47,6 @@ public class ProductController : Controller
         {
             //update
             productVM.Product = _unitOfWork.Product.Get(u => u.Id == id);
-            Console.WriteLine("####################################" + productVM.Product.ImageUrl);
             return View(productVM);
         }
 
@@ -62,7 +61,7 @@ public class ProductController : Controller
             if(file != null)
             {
                 string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                string productPath = Path.Combine(wwwRootPath, @"images\product");
+                string productPath = Path.Combine(wwwRootPath, @"\images\product\");
 
                 using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
                 {
