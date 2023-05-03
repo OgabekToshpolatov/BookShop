@@ -2,6 +2,7 @@ using BulkyBook.DataAccess.Data;
 using BulkyBook.DataAccess.Repository;
 using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
+using BulkyBook.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -20,56 +21,56 @@ public class ProductController : Controller
     public IActionResult Index()
     {
         List<Product> productList = _unitOfWork.Product.GetAll().ToList();
-        IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category
-            .GetAll().Select(u => new SelectListItem
+
+        return View(productList);
+    }
+
+    public IActionResult Upsert(int? id)
+    {
+        ProductVM productVM = new()
+        {
+            CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+            {
+                Text = u.Name,
+                Value = u.Id.ToString()
+            }),
+            Product = new Product()
+        };
+        if(id == null || id == 0)
+        {
+            //create
+            return View(productVM);
+        }
+        else
+        {
+            //update
+            productVM.Product = _unitOfWork.Product.Get(u => u.Id == id);
+            return View(productVM);
+        }
+
+    }
+
+    [HttpPost]
+    public IActionResult Upsert(ProductVM productVM, IFormFile? file)
+    {
+        if (ModelState.IsValid)
+        {
+            _unitOfWork.Product.Add(productVM.Product);
+            _unitOfWork.Save();
+            TempData["success"] = "Product created successfully";
+            return RedirectToAction("Index");
+        }
+        else
+        {
+
+            productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
             {
                 Text = u.Name,
                 Value = u.Id.ToString()
             });
 
-        return View(productList);
-    }
-
-    public IActionResult Create()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    public IActionResult Create(Product obj)
-    {
-        if (ModelState.IsValid)
-        {
-            _unitOfWork.Product.Add(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Product created successfully";
-            return RedirectToAction("Index");
         }
-        return View(obj);
-    }
-    public IActionResult Edit(int? id)
-    {
-        if (id == null || id == 0)
-        {
-            return NotFound();
-        }
-        var productId = _unitOfWork.Product.Get(u => u.Id == id);
-        if (productId is null) return NotFound();
-        return View(productId);
-    }
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public IActionResult Edit(Product obj)
-    {
-
-        if (ModelState.IsValid)
-        {
-            _unitOfWork.Product.Update(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Product updated successfully";
-            return RedirectToAction("Index");
-        }
-        return View(obj);
+        return View(productVM);
     }
 
     public IActionResult Delete(int? id)
