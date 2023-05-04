@@ -13,8 +13,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\BookShop\\Bulky\\BulkyWeb\\wwwroot\\images\\product\\2eb2f6f4-4e24-4080-bb7d-38d59c8134e4.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\2eb2f6f4-4e24-4080-bb7d-38d59c8134e4.jpg"
+      "Id": "E:\\BookShop\\Bulky\\BulkyWeb\\wwwroot\\images\\product\\5b4b8b32-5136-4d74-a79a-fd03ed8b1659.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\5b4b8b32-5136-4d74-a79a-fd03ed8b1659.jpg"
+    },
+    {
+      "Id": "E:\\BookShop\\Bulky\\BulkyWeb\\wwwroot\\images\\product\\e63d3e34-a758-4ffd-9abd-fa0fa8ab1f64.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\e63d3e34-a758-4ffd-9abd-fa0fa8ab1f64.jpg"
     },
     {
       "Id": "E:\\BookShop\\Bulky\\BulkyWeb\\wwwroot\\js\\site.js",
